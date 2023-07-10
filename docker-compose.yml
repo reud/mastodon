@@ -11,6 +11,9 @@ services:
     volumes:
       - ./postgres14:/var/lib/postgresql/data
     environment:
+      - 'POSTGRES_USER=mastodon_user'
+      - 'POSTGRES_DB=mastodon_db'
+      - 'POSTGRES_PASSWORD=password'
       - 'POSTGRES_HOST_AUTH_METHOD=trust'
 
   redis:
